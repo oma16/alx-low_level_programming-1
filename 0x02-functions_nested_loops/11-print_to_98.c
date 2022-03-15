@@ -1,29 +1,36 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - A function that prints all natural numbers from n
- *to 98, followed by a new line.
+ * print_to_98 - function that prints all natural numbers from n to 98
+ * @n: takes in an integer
  *
- *@n: Delimater number
- *Return: void
- **/
+ */
 void print_to_98(int n)
 {
-int i = 0;
-printf("%d", n);
-if (n <= 98)
-{
-for (i = n + 1; i <= 98; ++i)
-{
-printf(", %d", i);
-}
-}
-else
-{
-for (i = n - 1; i >= 98; --i)
-{
-printf(", %d", i);
-}
-}
-printf("\n");
+	int i;
+
+	if (n > 98)
+	{
+		for (i = n; i > 97; i--)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	else
+	{
+		for (i = n; i < 99; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+
+	}
+	printf("\n");
 }

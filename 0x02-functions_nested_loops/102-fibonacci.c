@@ -1,23 +1,21 @@
 #include <stdio.h>
-
 /**
-* main - computes and prints the
-*sum of all the multiples of 3 or 5 below 1024
-* Return: 0
-*/
+ * main -  prints the first 50 Fibonacci numbers, starting with 1 and 2
+ * @void: no argument
+ * Return: 0
+ */
 int main(void)
 {
-long int m = 1, k = 2, i = 0;
-long int sum = 0;
-printf("%ld\n, %ld\n, ", m, k);
-for (i = 0; i < 47; ++i)
-{
-sum = m + k;
-printf("%ld\n, ", sum);
-m = k;
-k = sum;
-}
-sum = m + k;
-printf("%ld\n", sum);
-return (0);
+	long pri = 1, sec = 2, sum;
+
+	printf("1, 2");
+	while (sum < 20365011073)
+	{
+		sum = pri + sec;
+		printf(", %lu", sum);
+		pri = sec;
+		sec = sum;
+	}
+	printf("\n");
+	return (0);
 }

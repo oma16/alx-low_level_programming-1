@@ -1,38 +1,32 @@
 #include <stdio.h>
 
 /**
-* main - Fibonacci
-*
-* Return: 0 -> Success
-*/
+ * main - main function
+ *
+ * Return: 0
+ */
 int main(void)
 {
-unsigned long int a = 1, b = 2, c, k, p, l, o, m, u, d, i;
-c = a + b;
-printf("%lu, %lu, ", a, b);
-d = 3;
-while (d < 89)
-{
-printf("%lu, ", c);
-a = b;
-b = c;
-c = a + b;
-d++;
-}
-l = b / 1000000000;
-o = b % 1000000000;
-m = c / 1000000000;
-u = c % 1000000000;
-for (i = 89; i < 98; i++)
-{
-printf("%lu%lu, ", m, u);
-k = l;
-p = o;
-l = m;
-o = u;
-m = k + l + ((p + o) / 1000000000);
-u = (p + o) % 1000000000;
-}
-printf("%lu%lu\n", m, u);
-return (0);
+	int counter = 2;
+
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
+
+	printf("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
+	{
+		counter++;
+		printf("%.0f", c);
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 98)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
+	return (0);
 }
